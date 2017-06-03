@@ -1,3 +1,8 @@
+.clr
+{
+	overflow: hidden;
+}
+
 header
 {
 	background: rgba(0,0,0,0.3);
@@ -9,34 +14,40 @@ nav
 	height: 50px;
 }
 
-ul
+.firstMenu,
+.scndMenu
 {
 	margin: 0;
-}
-
-nav ul
-{
+	padding: 0;
 	list-style: none;
-/* 	margin: 0; */
-	float: right;
+	/*line-height: 50px;*/
+	
 }
 
-nav ul li, nav .logo
+.firstMenu > li,
+.scndMenu > li
 {
-	display: inline-block;
+	text-align: center;
+	background-color: rgba(102,102,102,0.42);
+}
+
+nav a 
+{
 	line-height: 50px;
-	margin-right: 20px;
-}
-
-nav ul li a, .logo a
-{
-	line-height: 50px; /* 不设置也居中了?。。。 */
 	text-decoration: none;
 	color: #fff;
+	opacity: 0.8;
 
 	/* 将链接从字到块，感应鼠标范围 */
-	display: inline-block;
+	display: block;
+	padding: 0 10px;
 	height: inherit;
+}
+
+nav a:hover
+{
+	opacity: 1;
+	background-color: rgba(102,102,102,0.6);
 }
 
 nav .logo
@@ -49,11 +60,31 @@ nav .logo
 	
 }
 
-.logo a
+.firstMenu 
 {
-	color: #fff;
+	float: right;
 }
 
+.firstMenu > li
+{
+	float: left;
+	position: relative;
+}
+
+ .scndMenu
+{
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 80px;
+} 
+
+ .scndMenu > li
+ {
+ 	margin-top: 2px;
+ }
+
+/*menu end*/
 
 #banner
 {
