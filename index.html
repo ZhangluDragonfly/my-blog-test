@@ -6,21 +6,29 @@
 	<!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"> -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
+
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+	
 </head>
 <body>
 	<div class="main-wrapper">
-		<header><!-- 页头 -->
+	<header><!-- 页头 -->
 		<nav>
-			<div class="logo"><a href="#">张璐璐</a></div>
+			<div class="logo"><a href="#">张璐璐<span>了解我</span></a></div>
 			<ul class="firstMenu ">
-				<li class="active"><a href="#">链接1</a>
-					<ul class="scndMenu">
+				<li class="active" onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">链接1</a>
+					<ul class="subMenu">
 						<li><a href="#">菜单项1</a></li>
 						<li><a href="#">菜单项2</a></li>
 						<li><a href="#">菜单项3</a></li>
 					</ul>
 				</li>
-				<li><a href="#">链接3</a></li>
+				<li><a href="#">链接3</a>
+					<ul class="subMenu">
+						<li><a href="#">菜单项1</a></li>
+						<li><a href="#">菜单项2</a></li>
+					</ul>
+				</li>
 				<li><a href="#">链接4</a></li>
 			</ul>
 		</nav>
@@ -132,5 +140,32 @@
 	</footer>
 	</div>
 	
+
+	<script type="text/javascript">
+		/*js原生方法实现子菜单的显示和隐藏*/
+		function showSubMenu (firstMenu) {
+			var subMenu = firstMenu.getElementsByTagName('ul')[0];
+			subMenu.style.display = "block";
+		}
+
+		function hideSubMenu (firstMenu) {
+			var subMenu = firstMenu.getElementsByTagName('ul')[0];
+			subMenu.style.display = "none";
+		}
+
+		/*jQuery方法实现子菜单的显示和隐藏*/
+		
+		$(".firstMenu>li").mouseover(function(e) {
+		console.log();
+        $(this).children(".subMenu").show();
+        });
+
+		$(".firstMenu>li").mouseout(function(e) {
+            $(this).children(".subMenu").hide();
+        });
+		
+		
+	</script>
+
 </body>
 </html>

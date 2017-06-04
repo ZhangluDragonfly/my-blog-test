@@ -10,12 +10,13 @@ header
 
 nav
 {
-	background: transparent;
+	/*background: transparent;*/
 	height: 50px;
+	background-color: rgba(102,102,102,0.42);
 }
 
 .firstMenu,
-.scndMenu
+.subMenu
 {
 	margin: 0;
 	padding: 0;
@@ -25,9 +26,14 @@ nav
 }
 
 .firstMenu > li,
-.scndMenu > li
+.subMenu > li
 {
 	text-align: center;
+	/*background-color: rgba(102,102,102,0.42);*/
+}
+
+.subMenu > li
+{
 	background-color: rgba(102,102,102,0.42);
 }
 
@@ -40,7 +46,7 @@ nav a
 
 	/* 将链接从字到块，感应鼠标范围 */
 	display: block;
-	padding: 0 10px;
+	padding: 0 20px;
 	height: inherit;
 }
 
@@ -56,8 +62,22 @@ nav .logo
 	font-size: 20px;
 	font-weight: 700;
 	letter-spacing: 1px;
-	padding-left: 10px
 	
+}
+
+nav .logo a span
+{
+	display: none;
+}
+
+nav .logo a:hover span
+{
+	display: block;
+}
+
+nav .logo a:hover
+{
+	margin-top: -50px;
 }
 
 .firstMenu 
@@ -71,15 +91,22 @@ nav .logo
 	position: relative;
 }
 
- .scndMenu
+/*CSS实现控制二级菜单显示*/
+/* .firstMenu > li:hover .subMenu
+{
+	display: block;
+} */
+
+ .subMenu
 {
 	position: absolute;
-	left: 0;
+	left: 0px;
 	top: 50px;
-	width: 80px;
+	width: 100px;
+	display: none;/*CSS实现控制二级菜单隐藏*/
 } 
 
- .scndMenu > li
+ .subMenu > li
  {
  	margin-top: 2px;
  }
