@@ -21,7 +21,7 @@
         </div>
         <div class="text-section">
           <h2>又一个标题</h2>
-          <div class="sub-heading">青岛南区逛啊逛</div>
+          <div class="sub-heading"><router-link to="/pageQingdao">青岛南区逛啊逛</router-link></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quod, maxime, ipsum expedita, reprehenderit rerum inventore ea placeat quis necessitatibus, possimus quibusdam. Dicta ipsa quia ratione eius excepturi accusamus.</p>
         </div>
       </div>
@@ -103,13 +103,18 @@ export default {
   overflow: hidden;
 }
 
+a 
+{
+  text-decoration: none;
+  color: #fff;
+}
+
 
 .sub-heading
 {
   line-height: 30px;
   margin: 30px 0;
 }
-
 
 .green-section
 {
@@ -147,7 +152,6 @@ h3
   margin: 20px auto;
 
 }
-
 
 .green-section .hr 
 {

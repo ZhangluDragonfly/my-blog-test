@@ -1,13 +1,19 @@
 <template>
   <div id="app">
+    <blog-nav></blog-nav>
     <!-- <img src="./assets/logo.png"> -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import blogNav from './components/blogNav';
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+      blogNav
+  }
 }
 </script>
 
