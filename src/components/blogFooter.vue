@@ -1,11 +1,10 @@
 <template>
   <footer><!-- 页尾 -->
     <ul class="share-group">
-      <li class="fa fa-cart-arrow-down"></li>
-      <li>item2</li>
-      <li>item3</li>
-      <li>item4</li>
-      <li>item5</li>
+      <li><i class="fa fa-weibo" aria-hidden="true"></i></li>
+      <li><i class="fa fa-weixin" aria-hidden="true"></i></li>
+      <li><i class="fa fa-qq" aria-hidden="true"></i></li>
+      <li><i class="fa fa-github" aria-hidden="true"></i></li>
     </ul>
     <div class="copy">
       &copy 张璐璐

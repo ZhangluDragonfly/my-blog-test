@@ -3,14 +3,14 @@
     <section class="green-section">
       <div class="wrapper">
         <div>
-          <h2>一个标题</h2>
+          <h2>你就说，我是不是个好孩子</h2>
           <div class="hr"></div>
           <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
         </div>
         <div class="icon-group">
-          <span class="icon">item1</span>
-          <span class="icon">item2</span>
-          <span class="icon">item3</span>
+          <span class="icon"><i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i></span>
+          <span class="icon"><i class="fa fa-gift fa-2x" aria-hidden="true"></i></span>
+          <span class="icon"><i class="fa fa-wifi fa-2x" aria-hidden="true"></i></span>
         </div>
       </div>                  
     </section>
@@ -21,14 +21,14 @@
         </div>
         <div class="text-section">
           <h2>又一个标题</h2>
-          <div class="sub-heading">我是副标题你好</div>
+          <div class="sub-heading">青岛南区逛啊逛</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quod, maxime, ipsum expedita, reprehenderit rerum inventore ea placeat quis necessitatibus, possimus quibusdam. Dicta ipsa quia ratione eius excepturi accusamus.</p>
         </div>
       </div>
       <div class="article-preview">
         <div class="text-section">
           <h2>又一个标题</h2>
-          <div class="sub-heading">我是副标题你好</div>
+          <div class="sub-heading">武汉吃鸡浪啊浪</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quod, maxime, ipsum expedita, reprehenderit rerum inventore ea placeat quis necessitatibus, possimus quibusdam. Dicta ipsa quia ratione eius excepturi accusamus.</p>
         </div>
         <div class="img-section">
@@ -41,7 +41,7 @@
         </div>
         <div class="text-section">
           <h2>又一个标题</h2>
-          <div class="sub-heading">我是副标题你好</div>
+          <div class="sub-heading">冰镇西瓜爽啊爽</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quod, maxime, ipsum expedita, reprehenderit rerum inventore ea placeat quis necessitatibus, possimus quibusdam. Dicta ipsa quia ratione eius excepturi accusamus.</p>
         </div>
       </div>
@@ -49,33 +49,33 @@
     <section class="purple-section">
       <div class="wrapper">
         <div class="heading-wrapper">
-        <h2>又一个标题</h2>
+        <h2>你是不是菜</h2>
         <div class="hr"></div>
         <div class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo perferendis beatae sapiente obcaecati, rem distinctio tempora inventore architecto ullam sit nihil maxime neque, a aperiam nobis corporis facilis vero perspiciatis!</div>
       </div>
       <div class="card-group">
         <div class="card">
-          <h3>标题三</h3>
+          <h3>不会HTML</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quod quasi minima? Praesentium facilis ducimus tempore ullam repudiandae dolorem labore fugit.</p>
         </div>
         <div class="card">
-          <h3>标题三</h3>
+          <h3>不会CSS</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quod quasi minima? Praesentium facilis ducimus tempore ullam repudiandae dolorem labore fugit.</p>
         </div>
         <div class="card">
-          <h3>标题三</h3>
+          <h3>什么是JavaScript</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quod quasi minima? Praesentium facilis ducimus tempore ullam repudiandae dolorem labore fugit.</p>
         </div>
         <div class="card">
-          <h3>标题三</h3>
+          <h3>vue好不好吃？</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quod quasi minima? Praesentium facilis ducimus tempore ullam repudiandae dolorem labore fugit.</p>
         </div>
         <div class="card">
-          <h3>标题三</h3>
+          <h3>scss是CSS什么？</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quod quasi minima? Praesentium facilis ducimus tempore ullam repudiandae dolorem labore fugit.</p>
         </div>
         <div class="card">
-          <h3>标题三</h3>
+          <h3>npm？你怕吗？</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quod quasi minima? Praesentium facilis ducimus tempore ullam repudiandae dolorem labore fugit.</p>
         </div>
       </div>
@@ -149,7 +149,7 @@ h3
 }
 
 
-.green-section .hr
+.green-section .hr 
 {
   background: #3d9e91;
   width: 60%;
@@ -167,7 +167,21 @@ h3
   height: 80px;
   border: solid 2px #3d9e91;
   transform: rotate(45deg);
-  margin: 20px
+  margin: 20px;
+  position:relative;
+
+  i
+  {
+    display: inline-block;
+    // transform-origin: center; //center默认
+    transform: translate3d(-50%, -50%, 0) rotate(-45deg); //移动是按自身的角度而不是父元素，所以这里先移动再旋转和先旋转再移动的效果不一样！
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+  }
+
 }
 
 .gray-section

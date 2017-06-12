@@ -26,7 +26,7 @@
         <div class="hr"></div>
         <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veritatis sunt!</p>
         <button>了解我</button>
-        <div class="more">更多</div>
+        <div class="more"><span>更多</span><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
       </div>
     </div>
   </header>
@@ -186,7 +186,21 @@ export default {
 
   #banner .inner .more
   {
-    margin-top: 300px;
+    color: #ddd;
+    margin-top: 200px;
+    transition: all .2s;
+
+    span, i{
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &:hover
+    {
+      color: #fff;
+      cursor:pointer;
+
+    }
   }
 
   .sub-heading
