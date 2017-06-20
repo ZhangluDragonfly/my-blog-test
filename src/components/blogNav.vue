@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="logo"><a href="#">张璐璐<span>了解我</span></a></div>
+    <div class="logo"><a href="#banner"><router-link to="/">张璐璐</router-link></a></div>
     <ul class="firstMenu ">
       <li class="active" ><a href="#">链接1</a><!-- onmouseover="showSubMenu(this)" onmouseout="hideSubMenu(this)" -->
         <ul class="subMenu">
@@ -40,8 +40,7 @@ export default {
   }
 
  
-  nav
-  {
+  nav{
     /*background: transparent;*/
     height: 50px;
     background-color: rgba(102,102,102,0.42);
@@ -51,6 +50,32 @@ export default {
     top:0;
     left:0;
     right:0;
+
+    a {
+      line-height: 50px;
+      text-decoration: none;
+      color: #fff;
+      opacity: 0.8;
+
+      /* 将链接从字到块，感应鼠标范围 */
+      display: block;
+      padding: 0 20px;
+      height: inherit;
+
+      &:hover
+      {
+        opacity: 1;
+        background-color: rgba(102,102,102,0.6);
+      }
+    }
+
+    .logo{
+      float: left;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      
+    }
   }
 
   .firstMenu,
@@ -73,49 +98,6 @@ export default {
   .subMenu > li
   {
     background-color: rgba(102,102,102,0.42);
-  }
-
-  nav a 
-  {
-    line-height: 50px;
-    text-decoration: none;
-    color: #fff;
-    opacity: 0.8;
-
-    /* 将链接从字到块，感应鼠标范围 */
-    display: block;
-    padding: 0 20px;
-    height: inherit;
-  }
-
-  nav a:hover
-  {
-    opacity: 1;
-    background-color: rgba(102,102,102,0.6);
-  }
-
-  nav .logo
-  {
-    float: left;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    
-  }
-
-  nav .logo a span
-  {
-    display: none;
-  }
-
-  nav .logo a:hover span
-  {
-    display: block;
-  }
-
-  nav .logo a:hover
-  {
-    margin-top: -50px;
   }
 
   .firstMenu 

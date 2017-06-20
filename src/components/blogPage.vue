@@ -2,7 +2,7 @@
   <div class="main-wrapper">
   <blog-head></blog-head>
   <blog-content></blog-content>
-  <blog-footer></blog-footer>
+  <!-- <blog-footer></blog-footer> -->
   </div>
 </template>
 

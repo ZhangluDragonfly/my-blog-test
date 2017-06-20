@@ -6,7 +6,7 @@
         <h1>张璐璐</h1>
          <div class="hr"></div> 
         <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veritatis sunt!</p>
-        <button>了解我</button>
+        <button @click="onAboutMe">了解我</button>
         <div class="more"><span>更多</span><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
       </div>
     </div>
@@ -20,6 +20,11 @@ export default {
     return {
      
     }
+  },
+  methods: {
+    onAboutMe () {
+      console.log(123455);
+    }
   }
 }
 </script>
@@ -32,64 +37,63 @@ export default {
     overflow: hidden;
   }
 
-  header
-  {
+  header{
     background: rgba(0,0,0,0.3);
   }
 
-  #banner
-  {
+  #banner{
     background: transparent;
     height: 700px;
     color: #fff;
     position: relative;
-  }
 
-  #banner .inner 
-  {
-    max-width: 400px;
-    text-align: center;
-    margin: 0 auto;
+    .inner {
+      max-width: 400px;
+      text-align: center;
+      margin: 0 auto;
 
-    position: absolute;
-    top: 160px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+      position: absolute;
+      top: 160px;
+      left: 50%;
+      transform: translateX(-50%);
 
-  #banner .inner h1
-  {
-    margin: 0;
-  }
+      .hr {
+        background: #fff;
+        width: 60%;
+      }
 
-  #banner .inner .more
-  {
-    color: #ddd;
-    margin-top: 200px;
-    transition: all .2s;
+      h1 {
+        margin: 0;
+        letter-spacing: 5px;
+      }
 
-    span, i{
-      display: block;
-      margin-bottom: 10px;
+      .sub-heading {
+        line-height: 30px;
+        margin: 30px 0;
+      }
+
+      button {
+        padding: 14px 40px;
+      }
+
+      .more{
+        color: #ddd;
+        margin-top: 200px;
+        transition: all .2s;
+
+        span, i{
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        &:hover
+        {
+          color: #fff;
+          cursor:pointer;
+
+        }
+      }
     }
-
-    &:hover
-    {
-      color: #fff;
-      cursor:pointer;
-
-    }
-  }
-
-  .sub-heading
-  {
-    line-height: 30px;
-    margin: 30px 0;
-  }
-
-  #banner button
-  {
-    padding: 14px 40px;
   }
 
   button
@@ -98,23 +102,9 @@ export default {
     background: #4ab1a3;
     color: #eee;
     padding: 10px;
+    cursor:pointer;
   }
-
-  h1
-  {
-    letter-spacing: 5px;
-  }
-
-  h2
-  {
-    margin: 0;
-  }
-
-  h3
-  {
-    font-size: 24px;
-  }
-
+ 
 
   .hr
   {
@@ -124,10 +114,5 @@ export default {
 
   }
 
-  #banner .hr
-  {
-    background: #fff;
-    width: 60%;
-  }
 
 </style>

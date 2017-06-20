@@ -21,14 +21,14 @@
         </div>
         <div class="text-section">
           <h2>又一个标题</h2>
-          <div class="sub-heading"><router-link to="/pageQingdao">青岛南区逛啊逛</router-link></div>
+          <div class="sub-heading"><router-link :to='{name:"pageArticle",params:{name:"qingdao"}}'>青岛南区逛啊逛</router-link></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quod, maxime, ipsum expedita, reprehenderit rerum inventore ea placeat quis necessitatibus, possimus quibusdam. Dicta ipsa quia ratione eius excepturi accusamus.</p>
         </div>
       </div>
       <div class="article-preview">
         <div class="text-section">
           <h2>又一个标题</h2>
-          <div class="sub-heading">武汉吃鸡浪啊浪</div>
+          <div class="sub-heading"><router-link :to='{name:"pageArticle",params:{name:"wuhan"}}'>武汉吃鸡浪啊浪</router-link></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quod, maxime, ipsum expedita, reprehenderit rerum inventore ea placeat quis necessitatibus, possimus quibusdam. Dicta ipsa quia ratione eius excepturi accusamus.</p>
         </div>
         <div class="img-section">
@@ -41,7 +41,7 @@
         </div>
         <div class="text-section">
           <h2>又一个标题</h2>
-          <div class="sub-heading">冰镇西瓜爽啊爽</div>
+          <div class="sub-heading"><router-link :to='{name:"pageArticle",params:{name:"xigua"}}'>冰镇西瓜爽啊爽</router-link></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quod, maxime, ipsum expedita, reprehenderit rerum inventore ea placeat quis necessitatibus, possimus quibusdam. Dicta ipsa quia ratione eius excepturi accusamus.</p>
         </div>
       </div>
