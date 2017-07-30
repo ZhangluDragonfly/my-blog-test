@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import echarts from 'echarts'
 import elementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
 import 'font-awesome/css/font-awesome.min.css'
 import './css/reset.css'
 

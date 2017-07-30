@@ -1,8 +1,23 @@
 <template>
     <div class='map-page'>
         <div class="wrapper">
-            <el-button>默认按钮</el-button>
-            <el-button type="primary">主要按钮</el-button>
+            <el-carousel :interval="4000" type="card" height="300px" class="carouselContainer">
+              <el-carousel-item >
+                <img src="../img/carousel/2.jpg" alt="">
+              </el-carousel-item>
+              <el-carousel-item >
+                <img src="../img/carousel/3.jpg" alt="">
+              </el-carousel-item>
+              <el-carousel-item >
+                <img src="../img/carousel/4.jpg" alt="">
+              </el-carousel-item>
+              <el-carousel-item >
+                <img src="../img/carousel/5.jpg" alt="">
+              </el-carousel-item>
+              <el-carousel-item >
+                <img src="../img/carousel/6.jpg" alt="">
+              </el-carousel-item>
+            </el-carousel>
             <div id="map"></div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam optio quasi sapiente labore enim nisi sit, facere adipisci corrupti distinctio. Fuga eos in debitis recusandae rerum minus nulla sint, doloribus?
         </div>
@@ -85,6 +100,12 @@ export default {
             name:'黄岛区金沙滩',
             value:[120.25287237120372,35.96506524119216]
             }
+        ],
+        carouselImg: [
+          "../img/carousel/1.jpg",
+          "../img/carousel/2.jpg",
+          "../img/carousel/3.jpg",
+          "../img/carousel/4.jpg",
         ]
     }
   },
@@ -168,5 +189,23 @@ export default {
     padding: 20px;
 
 }
+
+ .el-carousel__item img {
+    /* color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 200px;
+    margin: 0; */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
 
 </style>
