@@ -3,11 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import echarts from 'echarts'
+import elementUI from 'element-ui'
 import 'font-awesome/css/font-awesome.min.css'
 import './css/reset.css'
 
-Vue.config.productionTip = false
-
+//Vue.config.productionTip = false
+Vue.use(echarts)
+Vue.use(elementUI)
+console.log(echarts)
+console.log(elementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
