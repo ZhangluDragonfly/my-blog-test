@@ -1,25 +1,11 @@
 <template>
-  <div class="article-wrapper">
-    <h1>{{article[key].title}}</h1>
-    <div v-html="article[key].content"></div>
-     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, corrupti! Reprehenderit, libero officiis obcaecati quam ipsam voluptates?</p>
-    <div class="img-sec">
-    	<img src="../img/nanqu01.jpg" alt="">
+    <div class='article-page'>
+        <div class="article-wrapper">
+            <h1>{{article[key].title}}</h1>
+            <div v-html="article[key].content"></div>
+        </div> 
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptate beatae illo, numquam quis et culpa tenetur consequatur non totam laudantium, doloribus excepturi ut obcaecati quisquam accusantium vel, itaque, nihil!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptate beatae illo, numquam quis et culpa tenetur consequatur non totam laudantium, doloribus excepturi ut obcaecati quisquam accusantium vel, itaque, nihil!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptate beatae illo, numquam quis et culpa tenetur consequatur non totam laudantium, doloribus excepturi ut obcaecati quisquam accusantium vel, itaque, nihil!</p>
-    <div class="img-section">
-    	<img src="../img/nanqu02.jpg" alt="">
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A fugit harum nesciunt, possimus veritatis commodi, atque sit temporibus aperiam repudiandae enim incidunt quos maxime iste ea, odio molestias earum? Maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptate beatae illo, numquam quis et culpa tenetur consequatur non totam laudantium, doloribus excepturi ut obcaecati quisquam accusantium vel, itaque, nihil!</p>
-    <div class="img-section">
-    	<img src="../img/nanqu03.jpg" alt="">
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptate beatae illo, numquam quis et culpa tenetur consequatur non totam laudantium, doloribus excepturi ut obcaecati quisquam accusantium vel, itaque, nihil!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi voluptate beatae illo, numquam quis et culpa tenetur consequatur non totam laudantium, doloribus excepturi ut obcaecati quisquam accusantium vel, itaque, nihil!</p>
-    <div class="img-section">
-    	<img src="../img/nanqu04.jpg" alt="">
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A fugit harum nesciunt, possimus veritatis commodi, atque sit temporibus aperiam repudiandae enim incidunt quos maxime iste ea, odio molestias earum? Maiores.</p> -->
-  </div> 
+  
 </template>
 
 <script>
@@ -95,9 +81,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-
+.article-page {
+    background: #eee;
+}
 .article-wrapper
 {
+    background: #fff;
 	width: 850px;
 	margin: 50px auto 0;
 	border-left: solid 2px #ddd;

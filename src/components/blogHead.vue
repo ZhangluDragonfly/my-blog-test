@@ -6,7 +6,7 @@
         <h1>张璐璐</h1>
          <div class="hr"></div> 
         <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veritatis sunt!</p>
-        <button @click="onAboutMe">了解我</button>
+        <button><router-link :to='{name:"pageMap"}'>了解我</router-link></button>
         <div class="more"><span>更多</span><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
       </div>
     </div>
@@ -22,9 +22,9 @@ export default {
     }
   },
   methods: {
-    onAboutMe () {
+    /*onAboutMe () {
       console.log(123455);
-    }
+    }*/
   }
 }
 </script>
