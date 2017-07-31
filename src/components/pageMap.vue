@@ -1,25 +1,17 @@
 <template>
     <div class='map-page'>
         <div class="wrapper">
-            <el-carousel :interval="4000" type="card" height="300px" class="carouselContainer">
-              <el-carousel-item >
-                <img src="../img/carousel/2.jpg" alt="">
-              </el-carousel-item>
-              <el-carousel-item >
-                <img src="../img/carousel/3.jpg" alt="">
-              </el-carousel-item>
-              <el-carousel-item >
-                <img src="../img/carousel/4.jpg" alt="">
-              </el-carousel-item>
-              <el-carousel-item >
-                <img src="../img/carousel/5.jpg" alt="">
-              </el-carousel-item>
-              <el-carousel-item >
-                <img src="../img/carousel/6.jpg" alt="">
+            <el-carousel :interval="4000"  height="400px" class="carouselContainer">
+              <el-carousel-item v-for="item in carouselImg" :key='item'>
+                <img :src="item.src" alt="">
               </el-carousel-item>
             </el-carousel>
             <div id="map"></div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam optio quasi sapiente labore enim nisi sit, facere adipisci corrupti distinctio. Fuga eos in debitis recusandae rerum minus nulla sint, doloribus?
+            <el-carousel type="card" height="550px" :autoplay="false" :initial-index='imgIndex'  ref="mapCarouselCom">
+              <el-carousel-item v-for="item in mapImg" :key="item">
+                <img :src="item.src" alt="">
+              </el-carousel-item>
+            </el-carousel>
         </div>
     </div>
 
@@ -27,7 +19,8 @@
 
 <script>
 import echarts from 'echarts'
-import qingdao from '@/data/qingdaoMap'
+import qingdao from '@/data/qingdao'
+import imgData from '@/data/imgData.json'
 echarts.registerMap('qingdao', qingdao)
 export default {
   name: 'pageMap',
@@ -101,22 +94,28 @@ export default {
             value:[120.25287237120372,35.96506524119216]
             }
         ],
-        carouselImg: [
-          "../img/carousel/1.jpg",
-          "../img/carousel/2.jpg",
-          "../img/carousel/3.jpg",
-          "../img/carousel/4.jpg",
-        ]
+        carouselImg: imgData.linkerImg,/*[
+          {src: require("../img/carousel/2.jpg")},
+          {src: require("../img/carousel/3.jpg")},
+          {src: require("../img/carousel/4.jpg")},
+          {src: require("../img/carousel/5.jpg")},
+          {src: require("../img/carousel/6.jpg")}
+        ]*/
+        mapImg: imgData.mapImg,
+        imgIndex: 1
     }
   },
   mounted() {
+    var me = this;
     const mapElement = document.getElementById('map')
     var myChart = echarts.init(mapElement);
     var option = {
       backgroundColor: '#404a59',
       title: {
-        text: '2016要去的地方',
-        left: 'center',
+        text: '那些年去过的地方',
+        //left: 'center',
+        right: 50,
+        bottom: 10,
         textStyle: {
           color: '#fff'
         }
@@ -169,6 +168,17 @@ export default {
       }]
     };
     myChart.setOption(option);
+
+    myChart.on('click', me.onMapClick);
+  },
+  methods: {
+    onMapClick(param){
+      if(param.componentType === "series") {
+        const mapCarouselCom = this.$refs.mapCarouselCom;
+        const index = this.mapImg.findIndex(value => value.name == param.name);
+        mapCarouselCom.setActiveItem(index);
+      }
+    }
   }
 
 }
@@ -182,12 +192,12 @@ export default {
 .wrapper
 {
     background: #fff;
-    width: 1000px;
-    height: 1000px;
+    width: 900px;
+    //height: 1000px;
     margin: 50px auto 0;
     border-left: solid 2px #ddd;
     border-right: solid 2px #ddd;
-    padding: 20px;
+    //padding: 20px;
 
 }
 

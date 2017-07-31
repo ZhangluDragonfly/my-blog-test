@@ -1,0 +1,104 @@
+{
+	"linkerImg":[
+	{
+		"src": "./static/img/carousel/2.jpg"
+	},{
+		"src": "./static/img/carousel/3.jpg"
+	},{
+		"src": "./static/img/carousel/4.jpg"
+	},{
+		"src": "./static/img/carousel/5.jpg"
+	},{
+		"src": "./static/img/carousel/6.jpg"
+	}],
+	"mapImg": [
+	{
+		"src": "./static/img/mapImg/shilaoren.jpg",
+		"name": "石老人海水浴场",
+		"index": 0
+	},{
+		"src": "./static/img/mapImg/diaosugongyuan.jpg",
+		"name": "雕塑公园",
+		"index": 1
+	},{
+		"src": "./static/img/mapImg/maidao.jpg",
+		"name": "麦岛",
+		"index": 2
+	},{
+		"src": "./static/img/mapImg/aofanzhongxin.jpg",
+		"name": "青岛国际帆船中心",
+		"index": 3
+	},{
+		"src": "./static/img/mapImg/wusiguangchang.jpg",
+		"name": "五四广场",
+		"index": 4
+	},{
+		"src": "./static/img/mapImg/sanyu.jpg",
+		"name": "第三海水浴场",
+		"index": 5
+	},{
+		"src": "./static/img/mapImg/eryu.jpg",
+		"name": "第二海水浴场",
+		"index": 6
+	},{
+		"src": "./static/img/mapImg/badaguan.jpg",
+		"name": "八大关",
+		"index": 7
+	},{
+		"src": "./static/img/mapImg/luxungongyuan.jpg",
+		"name": "鲁迅公园",
+		"index": 8
+	},{
+		"src": "./static/img/mapImg/xiaoqingdao.jpg",
+		"name": "小青岛",
+		"index": 9
+	},{
+		"src": "./static/img/mapImg/yiyu.jpg",
+		"name": "第一海水浴场",
+		"index": 10
+	},{
+		"src": "./static/img/mapImg/zhanqiao.jpg",
+		"name": "栈桥",
+		"index": 11
+	},{
+		"src": "./static/img/mapImg/huochezhan.jpg",
+		"name": "青岛火车站",
+		"index": 12
+	},{
+		"src": "./static/img/mapImg/licungongyuan.jpg",
+		"name": "李村公园",
+		"index": 13
+	},{
+		"src": "./static/img/mapImg/zhongshangongyuan.jpg",
+		"name": "中山公园",
+		"index": 14
+	},{
+		"src": "./static/img/mapImg/daxuelu.jpg",
+		"name": "大学路",
+		"index": 15
+	},{
+		"src": "./static/img/mapImg/xinhaoshan.jpg",
+		"name": "信号山公园",
+		"index": 16
+	},{
+		"src": "./static/img/mapImg/fushan.jpg",
+		"name": "浮山森林公园",
+		"index": 17
+	},{
+		"src": "./static/img/mapImg/haidonglu.jpg",
+		"name": "东海东路",
+		"index": 18
+	},{
+		"src": "./static/img/mapImg/haida.jpg",
+		"name": "中国海洋大学(崂山校区)",
+		"index": 19
+	},{
+		"src": "./static/img/mapImg/tanggangwan.jpg",
+		"name": "黄岛区唐港湾滨海公园",
+		"index": 20
+	},{
+		"src": "./static/img/mapImg/jinshatan.jpg",
+		"name": "黄岛区金沙滩",
+		"index": 21
+	}]
+}
