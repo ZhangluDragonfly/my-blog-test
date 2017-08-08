@@ -2,13 +2,13 @@
     <div class='map-page'>
         <div class="wrapper">
             <el-carousel :interval="4000"  height="400px" class="carouselContainer">
-              <el-carousel-item v-for="item in carouselImg" :key='item'>
+              <el-carousel-item v-for="item in carouselImg" :key='item.index'>
                 <img :src="item.src" alt="">
               </el-carousel-item>
             </el-carousel>
             <div id="map"></div>
             <el-carousel type="card" height="550px" :autoplay="false" :initial-index='imgIndex'  ref="mapCarouselCom">
-              <el-carousel-item v-for="item in mapImg" :key="item">
+              <el-carousel-item v-for="item in mapImg" :key="item.index">
                 <img :src="item.src" alt="">
               </el-carousel-item>
             </el-carousel>
@@ -106,10 +106,10 @@ export default {
     }
   },
   mounted() {
-    var me = this;
+    let me = this;
     const mapElement = document.getElementById('map')
-    var myChart = echarts.init(mapElement);
-    var option = {
+    let myChart = echarts.init(mapElement);
+    let option = {
       backgroundColor: '#404a59',
       title: {
         text: '那些年去过的地方',
@@ -161,9 +161,7 @@ export default {
         coordinateSystem: 'geo',
         data: this.chartData,
         symbol: 'pin',
-        symbolSize: function(val) {
-          return 20;
-        },
+        symbolSize: val=>20,
         hoverAnimation: false
       }]
     };
@@ -210,11 +208,11 @@ export default {
     width: 100%;
     height: 100%;
   }
-  
+
   .el-carousel__item:nth-child(2n) {
     background-color: #99a9bf;
   }
-  
+
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
