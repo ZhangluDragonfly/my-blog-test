@@ -1,15 +1,20 @@
 {
 	"linkerImg":[
 	{
-		"src": "./static/img/carousel/2.jpg"
+		"src": "./static/img/carousel/2.jpg",
+		"index": 0
 	},{
-		"src": "./static/img/carousel/3.jpg"
+		"src": "./static/img/carousel/3.jpg",
+		"index": 1
 	},{
-		"src": "./static/img/carousel/4.jpg"
+		"src": "./static/img/carousel/4.jpg",
+		"index": 2
 	},{
-		"src": "./static/img/carousel/5.jpg"
+		"src": "./static/img/carousel/5.jpg",
+		"index": 3
 	},{
-		"src": "./static/img/carousel/6.jpg"
+		"src": "./static/img/carousel/6.jpg",
+		"index": 4
 	}],
 	"mapImg": [
 	{
